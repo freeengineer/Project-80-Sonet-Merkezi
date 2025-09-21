@@ -43,7 +43,8 @@ export default function App() {
               return (
                 <p key={i}>
                   {parts.map((part, idx) =>
-                    part.toLowerCase() === searchInput.toLowerCase() ? (
+                    part.toLowerCase() === searchInput.toLowerCase() &&
+                    searchInput ? (
                       <span key={idx}>{part}</span>
                     ) : (
                       part
